@@ -42,6 +42,7 @@ public class LonelyTwitterActivity extends Activity {
 		bodyText = (EditText) findViewById(R.id.body);
 		Button saveButton = (Button) findViewById(R.id.save);
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
+		Button clearButton = (Button) findViewById(R.id.clear);
 
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
@@ -57,7 +58,16 @@ public class LonelyTwitterActivity extends Activity {
 				//saveInFile(text, new Date(System.currentTimeMillis()));
 				//finish();
 
+
 			}
+		});
+		clearButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				tweets.clear();
+				adapter.notifyDataSetChanged();
+				saveInFile();
+			}
+
 		});
 	}
 
@@ -108,4 +118,6 @@ public class LonelyTwitterActivity extends Activity {
 			throw new RuntimeException();
 		}
 	}
+
+
 }

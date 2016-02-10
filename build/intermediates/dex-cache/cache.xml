@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/afs/ualberta.ca/home/w/a/wang8/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="/afs/ualberta.ca/home/w/a/wang8/Documents/CMPUT301/Lab7/lonelyTwitter/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-8e95b05b4975dc43fe3fa02bdfbb34ed90ef9523.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/w/a/wang8/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.5/686c608d1805b6d4d425ec4459e88164ffc85870/gson-2.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="/afs/ualberta.ca/home/w/a/wang8/Documents/CMPUT301/Lab7/lonelyTwitter/app/build/intermediates/pre-dexed/debug/gson-2.5-cc1c80b29e985c7a4b9072f8ad8189066a859fc3.jar" />
+    </item>
+    <item
+        jar="/afs/ualberta.ca/home/w/a/wang8/Documents/CMPUT301/Lab7/lonelyTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/18.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
+        <dex dex="/afs/ualberta.ca/home/w/a/wang8/Documents/CMPUT301/Lab7/lonelyTwitter/app/build/intermediates/pre-dexed/debug/classes-8d422d0fb227b2a70d994a036c20bd74fe8d7021.jar" />
+    </item>
+
+</items>

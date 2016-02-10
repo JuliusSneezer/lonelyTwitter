@@ -43,6 +43,8 @@ public class IntentReaderActivityTest extends ActivityInstrumentationTestCase2{
         assertEquals("The texts should be repeated twice", "message 3", ira.getText());
     }
 
+
+
     //TODO: Add your code here ...
 //-------------------------------------------------------------------------------
 

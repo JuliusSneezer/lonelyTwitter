@@ -33,7 +33,12 @@ public class ElasticsearchTweetController {
 
             // NOTE: I'm a making a huge assumption here, that only the first search term
             // will be used.
+            if (search_string[0] = "") {
 
+            }
+            else{
+                search_strings = (\"from\":0, \"size\:100}
+            }
             Search search = new Search.Builder(search_strings[0])
                     .addIndex("testing")
                     .addType("tweet")

@@ -47,6 +47,7 @@ public class LonelyTwitterActivity extends Activity {
 
         bodyText = (EditText) findViewById(R.id.body);
         Button saveButton = (Button) findViewById(R.id.save);
+        Button searchButton = (Button) findViewById(R.id.search);
         oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -60,10 +61,16 @@ public class LonelyTwitterActivity extends Activity {
 
                 // TODO: Replace with Elasticsearch
                 AsyncTask<NormalTweet, Void, Void> execute = new ElasticsearchTweetController.AddTweetTask();
-                execute.execute();
+                execute.execute(latestTweet);
                 //saveInFile();
 
                 setResult(RESULT_OK);
+            }
+        });
+        searchButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
             }
         });
     }
@@ -76,7 +83,7 @@ public class LonelyTwitterActivity extends Activity {
         // TODO: Replace with Elasticsearch
         ElasticsearchTweetController.GetTweetsTask getTweetsTask = new ElasticsearchTweetController.GetTweetsTask();
         try {
-            getTweetsTask.execute("");
+            getTweetsTask.execute("senpai");
             tweets = getTweetsTask.get();
         } catch (InterruptedException e) {
             e.printStackTrace();

@@ -41,21 +41,23 @@ public class ElasticsearchTweetController {
             //String search_string = "{\"query\":{\"match\":{\"message\":\"" + params[0] + "\"}}}";
 
             // The following orders the results by date
-            //String search_string = "{\"sort\": { \"date\": { \"order\": \"desc\" }}}";
+
+            String search_string = "{\"sort\": { \"date\": { \"order\": \"desc\" }}}";
+
 
             /* NEW! */
-            String search_string;
-            if(params[0] == "") {
-                search_string = "{\"from\":0,\"size\":10000}";
-            } else {
-                // The following gets the top 10000 tweets matching the string passed in
-                search_string = "{\"from\":0,\"size\":10000,\"query\":{\"match\":{\"message\":\"" + params[0] + "\"}}}";
-            }
+            // String search_string;
+            //if(params[0] == "") {
+            //search_string = "{\"from\":0,\"size\":10000}";
+            // } else {
+            // The following gets the top 10000 tweets matching the string passed in
+            // search_string = "{\"from\":0,\"size\":10000,\"query\":{\"match\":{\"message\":\"" + params[0] + "\"}}}";
+            // }
 
             Search search = new Search.Builder(search_string).addIndex("testing").addType("tweet").build();
             try {
                 SearchResult execute = client.execute(search);
-                if(execute.isSucceeded()) {
+                if (execute.isSucceeded()) {
                     List<NormalTweet> foundTweets = execute.getSourceAsObjectList(NormalTweet.class);
                     tweets.addAll(foundTweets);
                 } else {
@@ -68,6 +70,8 @@ public class ElasticsearchTweetController {
             return tweets;
         }
     }
+
+
 
     public static class AddTweetTask extends AsyncTask<NormalTweet,Void,Void> {
 
